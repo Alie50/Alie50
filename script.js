@@ -13,12 +13,22 @@ document.addEventListener("DOMContentLoaded", () => {
         sidebar.classList.remove("active");
     });
 
-    // Toggle dropdown
-    const dropdownBtn = document.getElementById("dropdownBtn");
-    const dropdownContent = document.getElementById("dropdownContent");
+    // Toggle dropdowns
+    const dropdownBtns = document.querySelectorAll(".dropbtn");
 
-    dropdownBtn.addEventListener("click", () => {
-        dropdownContent.classList.toggle("show");
+    dropdownBtns.forEach(btn => {
+        btn.addEventListener("click", function() {
+            const content = this.nextElementSibling;
+            content.classList.toggle("show");
+
+            // Rotate icon
+            const icon = this.querySelector("i");
+            if (content.classList.contains("show")) {
+                icon.style.transform = "rotate(180deg)";
+            } else {
+                icon.style.transform = "rotate(0deg)";
+            }
+        });
     });
 
     // إنشاء بطاقات الأنمي تجريبية
