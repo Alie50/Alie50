@@ -7,7 +7,8 @@
 }
 
 body {
-    background-color: #f4f4f4;
+    background-color: #0b0c1b;
+    color: white;
 }
 
 /* الهيدر */
@@ -91,6 +92,11 @@ header {
     align-items: center;
     font-weight: bold;
     justify-content: flex-end;
+    transition: 0.2s;
+}
+
+.sidebar ul li a:hover {
+    color: #6a11cb;
 }
 
 .sidebar ul li i {
@@ -189,11 +195,20 @@ header {
     font-size: 14px;
     font-weight: bold;
     margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .card-info span {
     font-size: 12px;
     color: #bbb;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+    box-shadow: 0 10px 20px rgba(106, 17, 203, 0.3);
 }
 
 /* Pagination */
