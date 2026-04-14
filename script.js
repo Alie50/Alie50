@@ -79,11 +79,34 @@ document.addEventListener("DOMContentLoaded", () => {
         return card;
     }
 
+    function createAdCard(adNumber) {
+        const card = document.createElement("div");
+        card.classList.add("card", "ad");
+        card.style.position = "relative";
+
+        card.innerHTML = `
+            <span class="ad-label">إعلان</span>
+            <div class="ad-placeholder">
+                <i class="fas fa-ad fa-3x" style="margin-bottom: 15px; color: #6a11cb;"></i>
+                <p>مساحة إعلانية ${adNumber}</p>
+            </div>
+        `;
+
+        return card;
+    }
+
     function renderSpecificList(list) {
         if (!animeGrid) return;
         animeGrid.innerHTML = "";
-        list.forEach(item => {
+        let adCount = 0;
+        list.forEach((item, index) => {
             animeGrid.appendChild(createCard(item));
+
+            // إضافة إعلان كل 4 منشورات (بحد أقصى 3 إعلانات)
+            if ((index + 1) % 4 === 0 && adCount < 3) {
+                adCount++;
+                animeGrid.appendChild(createAdCard(adCount));
+            }
         });
     }
 
@@ -103,8 +126,15 @@ document.addEventListener("DOMContentLoaded", () => {
             return matchesCategory && matchesGenre;
         });
 
-        filteredMovies.forEach(item => {
+        let adCount = 0;
+        filteredMovies.forEach((item, index) => {
             animeGrid.appendChild(createCard(item));
+
+            // إضافة إعلان كل 4 منشورات (بحد أقصى 3 إعلانات)
+            if ((index + 1) % 4 === 0 && adCount < 3) {
+                adCount++;
+                animeGrid.appendChild(createAdCard(adCount));
+            }
         });
 
         if (filteredMovies.length === 0) {
