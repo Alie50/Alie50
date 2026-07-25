@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة الإدارة - إضافة محتوى</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap">
+    <style>
+        .admin-container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .admin-container h2 {
+            text-align: center;
+            color: #512da8;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Cairo', sans-serif;
+        }
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        .submit-btn {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .submit-btn:hover {
+            opacity: 0.9;
+        }
+        .back-home {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #6a11cb;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-title">
+            <h1>لوحة الإدارة</h1>
+        </div>
+        <div class="menu-icon" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- القائمة الجانبية -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="search-sidebar">
+                <input type="text" placeholder="البحث...">
+            </div>
+            <div class="close-btn" id="closeSidebar">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">
+                    <i class="fas fa-chevron-down"></i> أفلام
+                </a>
+                <div class="dropdown-content">
+                    <a href="index.html">أكشن</a>
+                    <a href="index.html">دراما</a>
+                    <a href="index.html">كوميديا</a>
+                    <a href="index.html">رعب</a>
+                    <a href="index.html">خيال علمي</a>
+                    <a href="index.html">مغامرة</a>
+                    <a href="index.html">جريمة</a>
+                    <a href="index.html">غموض</a>
+                    <a href="index.html">رومانسية</a>
+                    <a href="index.html">فانتازيا</a>
+                    <a href="index.html">وثائقي</a>
+                    <a href="index.html">أنيميشن</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">
+                    <i class="fas fa-chevron-down"></i> انمي
+                </a>
+                <div class="dropdown-content">
+                    <a href="index.html">أكشن</a>
+                    <a href="index.html">دراما</a>
+                    <a href="index.html">كوميديا</a>
+                    <a href="index.html">رعب</a>
+                    <a href="index.html">خيال علمي</a>
+                    <a href="index.html">مغامرة</a>
+                    <a href="index.html">جريمة</a>
+                    <a href="index.html">غموض</a>
+                    <a href="index.html">رومانسية</a>
+                    <a href="index.html">فانتازيا</a>
+                    <a href="index.html">وثائقي</a>
+                    <a href="index.html">أنيميشن</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">
+                    <i class="fas fa-chevron-down"></i> كرتون
+                </a>
+                <div class="dropdown-content">
+                    <a href="index.html">أكشن</a>
+                    <a href="index.html">دراما</a>
+                    <a href="index.html">كوميديا</a>
+                    <a href="index.html">رعب</a>
+                    <a href="index.html">خيال علمي</a>
+                    <a href="index.html">مغامرة</a>
+                    <a href="index.html">جريمة</a>
+                    <a href="index.html">غموض</a>
+                    <a href="index.html">رومانسية</a>
+                    <a href="index.html">فانتازيا</a>
+                    <a href="index.html">وثائقي</a>
+                    <a href="index.html">أنيميشن</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">
+                    <i class="fas fa-chevron-down"></i> مسلسلات
+                </a>
+                <div class="dropdown-content">
+                    <a href="index.html">أكشن</a>
+                    <a href="index.html">دراما</a>
+                    <a href="index.html">كوميديا</a>
+                    <a href="index.html">رعب</a>
+                    <a href="index.html">خيال علمي</a>
+                    <a href="index.html">مغامرة</a>
+                    <a href="index.html">جريمة</a>
+                    <a href="index.html">غموض</a>
+                    <a href="index.html">رومانسية</a>
+                    <a href="index.html">فانتازيا</a>
+                    <a href="index.html">وثائقي</a>
+                    <a href="index.html">أنيميشن</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="admin-container">
+        <h2>إضافة محتوى جديد</h2>
+        <form id="contentForm">
+            <div class="form-group">
+                <label for="title">العنوان</label>
+                <input type="text" id="title" required placeholder="مثلاً: ون بيس">
+            </div>
+
+            <div class="form-group">
+                <label for="category">التصنيف الرئيسي</label>
+                <select id="category" required>
+                    <option value="">اختر التصنيف</option>
+                    <option value="أفلام">أفلام</option>
+                    <option value="انمي">انمي</option>
+                    <option value="كرتون">كرتون</option>
+                    <option value="مسلسلات">مسلسلات</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="genre">النوع</label>
+                <select id="genre" required>
+                    <option value="">اختر النوع</option>
+                    <option value="أكشن">أكشن</option>
+                    <option value="دراما">دراما</option>
+                    <option value="كوميديا">كوميديا</option>
+                    <option value="رعب">رعب</option>
+                    <option value="خيال علمي">خيال علمي</option>
+                    <option value="مغامرة">مغامرة</option>
+                    <option value="جريمة">جريمة</option>
+                    <option value="غموض">غموض</option>
+                    <option value="رومانسية">رومانسية</option>
+                    <option value="فانتازيا">فانتازيا</option>
+                    <option value="وثائقي">وثائقي</option>
+                    <option value="أنيميشن">أنيميشن</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="imageUrl">رابط الصورة (Poster)</label>
+                <input type="url" id="imageUrl" required placeholder="https://example.com/image.jpg">
+            </div>
+
+            <div class="form-group">
+                <label for="rating">التقييم</label>
+                <input type="text" id="rating" placeholder="مثلاً: 8.5">
+            </div>
+
+            <div class="form-group">
+                <label for="duration">المدة / عدد الحلقات</label>
+                <input type="text" id="duration" placeholder="مثلاً: 24 دقيقة أو 12 حلقة">
+            </div>
+
+            <div class="form-group">
+                <label for="story">القصة</label>
+                <textarea id="story" required placeholder="اكتب قصة المحتوى هنا..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">نشر المحتوى</button>
+        </form>
+        <a href="index.html" class="back-home"><i class="fas fa-arrow-right"></i> العودة للرئيسية</a>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('contentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const newItem = {
+                id: Date.now(),
+                title: document.getElementById('title').value,
+                category: document.getElementById('category').value,
+                genre: document.getElementById('genre').value,
+                imageUrl: document.getElementById('imageUrl').value,
+                rating: document.getElementById('rating').value,
+                duration: document.getElementById('duration').value,
+                story: document.getElementById('story').value
+            };
+
+            let movies = JSON.parse(localStorage.getItem('movies')) || [];
+            movies.push(newItem);
+            localStorage.setItem('movies', JSON.stringify(movies));
+
+            alert('تم نشر المحتوى بنجاح!');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
