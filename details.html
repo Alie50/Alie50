@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل المحتوى</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap">
+    <style>
+        body {
+            background-color: #0b0c1b;
+            color: white;
+        }
+        .details-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .details-header {
+            text-align: center;
+        }
+        .details-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .metadata {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 1.1rem;
+            color: #bbb;
+        }
+        .poster-section {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+        .poster-image {
+            width: 300px;
+            height: 450px;
+            border-radius: 15px;
+            object-fit: cover;
+            box-shadow: 0 0 30px rgba(106, 17, 203, 0.6);
+            border: 2px solid #6a11cb;
+        }
+        .story-box {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 10px;
+            border-right: 5px solid #6a11cb;
+            line-height: 1.8;
+        }
+        .story-box h3 {
+            margin-bottom: 15px;
+            color: #2575fc;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: white;
+            text-decoration: none;
+            background: #222;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .back-btn:hover {
+            background: #333;
+        }
+        @media (max-width: 768px) {
+            .poster-image {
+                width: 250px;
+                height: 375px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-title">
+            <h1 id="navTitle">Animation2</h1>
+        </div>
+        <div class="menu-icon" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- القائمة الجانبية -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="search-sidebar">
+                <input type="text" placeholder="البحث...">
+            </div>
+            <div class="close-btn" id="closeSidebar">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">
+                    <i class="fas fa-chevron-down"></i> أفلام
+                </a>
+                <div class="dropdown-content">
+                    <a href="index.html">أكشن</a>
+                    <a href="index.html">دراما</a>
+                    <a href="index.html">كوميديا</a>
+                    <a href="index.html">رعب</a>
+                    <a href="index.html">خيال علمي</a>
+                    <a href="index.html">مغامرة</a>
+                    <a href="index.html">جريمة</a>
+                    <a href="index.html">غموض</a>
+                    <a href="index.html">رومانسية</a>
+                    <a href="index.html">فانتازيا</a>
+                    <a href="index.html">وثائقي</a>
+                    <a href="index.html">أنيميشن</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">
+                    <i class="fas fa-chevron-down"></i> انمي
+                </a>
+                <div class="dropdown-content">
+                    <a href="index.html">أكشن</a>
+                    <a href="index.html">دراما</a>
+                    <a href="index.html">كوميديا</a>
+                    <a href="index.html">رعب</a>
+                    <a href="index.html">خيال علمي</a>
+                    <a href="index.html">مغامرة</a>
+                    <a href="index.html">جريمة</a>
+                    <a href="index.html">غموض</a>
+                    <a href="index.html">رومانسية</a>
+                    <a href="index.html">فانتازيا</a>
+                    <a href="index.html">وثائقي</a>
+                    <a href="index.html">أنيميشن</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">
+                    <i class="fas fa-chevron-down"></i> كرتون
+                </a>
+                <div class="dropdown-content">
+                    <a href="index.html">أكشن</a>
+                    <a href="index.html">دراما</a>
+                    <a href="index.html">كوميديا</a>
+                    <a href="index.html">رعب</a>
+                    <a href="index.html">خيال علمي</a>
+                    <a href="index.html">مغامرة</a>
+                    <a href="index.html">جريمة</a>
+                    <a href="index.html">غموض</a>
+                    <a href="index.html">رومانسية</a>
+                    <a href="index.html">فانتازيا</a>
+                    <a href="index.html">وثائقي</a>
+                    <a href="index.html">أنيميشن</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">
+                    <i class="fas fa-chevron-down"></i> مسلسلات
+                </a>
+                <div class="dropdown-content">
+                    <a href="index.html">أكشن</a>
+                    <a href="index.html">دراما</a>
+                    <a href="index.html">كوميديا</a>
+                    <a href="index.html">رعب</a>
+                    <a href="index.html">خيال علمي</a>
+                    <a href="index.html">مغامرة</a>
+                    <a href="index.html">جريمة</a>
+                    <a href="index.html">غموض</a>
+                    <a href="index.html">رومانسية</a>
+                    <a href="index.html">فانتازيا</a>
+                    <a href="index.html">وثائقي</a>
+                    <a href="index.html">أنيميشن</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="details-container">
+        <a href="index.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة للرئيسية</a>
+
+        <div id="detailsContent">
+            <!-- سيتم ملء البيانات بواسطة JavaScript -->
+             <p style="text-align: center;">جاري تحميل البيانات...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const itemId = urlParams.get('id');
+            const detailsContent = document.getElementById('detailsContent');
+
+            if (!itemId) {
+                detailsContent.innerHTML = '<p style="text-align: center;">لم يتم العثور على المحتوى.</p>';
+                return;
+            }
+
+            const movies = JSON.parse(localStorage.getItem('movies')) || [];
+            const item = movies.find(m => m.id == itemId);
+
+            if (item) {
+                document.title = item.title;
+                document.getElementById('navTitle').textContent = item.title;
+
+                detailsContent.innerHTML = `
+                    <div class="details-header">
+                        <h1>${item.title}</h1>
+                        <div class="metadata">
+                            <span><i class="fas fa-folder"></i> ${item.category} / ${item.genre}</span>
+                            <span><i class="fas fa-star" style="color: gold;"></i> ${item.rating || 'N/A'}</span>
+                            <span><i class="fas fa-clock"></i> ${item.duration || 'N/A'}</span>
+                        </div>
+                    </div>
+
+                    <div class="poster-section">
+                        <img src="${item.imageUrl}" alt="${item.title}" class="poster-image">
+                    </div>
+
+                    <div class="story-box">
+                        <h3>القصة</h3>
+                        <p>${item.story}</p>
+                    </div>
+                `;
+            } else {
+                detailsContent.innerHTML = '<p style="text-align: center;">المحتوى غير موجود في قاعدة البيانات المحلية.</p>';
+            }
+        });
+    </script>
+</body>
+</html>
